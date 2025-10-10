@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
+
+class Vogais {
+static void Main(string[] args)
+{
+    int total = 0;
+    var vogais = new HashSet<char> { 'a', 'e', 'i', 'o', 'u' };
+    
+
+    Console.WriteLine("Digite uma palavra");
+    string palavra = Console.ReadLine().ToLower();
+    
+    
+
+    for (int i = 0; i < palavra.Length; i++)
+    {
+        if (vogais.Contains(palavra[i]))
+        {
+            total++;
+        }
+    }
+    
+    
+    Console.WriteLine("O total de vogais é: {0}", total);
+
+    Console.ReadLine();
+}
+}
